@@ -1,0 +1,21 @@
+.main p {
+    font-size: 300%;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin:5% 0;
+    animation: moveAnimation 3s;
+}
+
+@keyframes moveAnimation {
+    0% {
+        transform: translate(250px,0);
+        opacity: .4;
+    }
+
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
