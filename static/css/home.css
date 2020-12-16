@@ -1,16 +1,36 @@
-.main p {
+.main .main-text {
     font-size: 300%;
     color:white;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-align: center;
-    margin:5% 0;
+    margin:5% 0 1% 0;
     animation: moveAnimation 3s;
+}
+
+.main .second-text {
+    text-align: center;
+    margin:auto;
+    width: 50%;
+    color:darkgray;
+    animation: moveAnimationLeft 3s;
 }
 
 @keyframes moveAnimation {
     0% {
         transform: translate(250px,0);
+        opacity: .4;
+    }
+
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveAnimationLeft {
+    0% {
+        transform: translate(-250px,0);
         opacity: .4;
     }
 
