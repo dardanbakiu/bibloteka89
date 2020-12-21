@@ -8,10 +8,13 @@
 </head>
 
 <body>
-    <form action="adminLoginForm" method="POST">
+    <form action="/adminLoginForm" method="POST">
         <input type="text" name="username" placeholder="username"> <br><br>
         <input type="password" name="password" placeholder="password"><br><br>
-        <input type="submit">
+        <input type="submit"> <br>
+        <p style="color: tomato;">
+            <%- loginError %>
+        </p>
     </form>
 </body>
 
