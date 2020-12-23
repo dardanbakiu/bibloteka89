@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/logout">Logout</a>
+
+    <form method="POST" action="/registerForm">
+        <input type="text" name="emri" placeholder="emri"> <br><br>
+        <input type="text" name="mbiemri" placeholder="mbiemri"><br><br>
+        <input type="email" name="email" placeholder="email"><br><br>
+        <input type="text" name="password" placeholder="password"><br><br>
+        <input type="number" name="kontakti" placeholder="kontakti"><br><br>
+        <input type="submit"><br>
+
+        <p>
+            <%- error %>
+        </p>
+    </form>
+</body>
+
+</html>

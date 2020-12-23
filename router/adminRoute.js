@@ -10,6 +10,7 @@ router.post('/adminLoginForm', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
+
     if (username == process.env.ADMIN_USER && password == process.env.ADMIN_PW) {
         req.session.admin = username
         res.redirect('/register')
