@@ -12,6 +12,7 @@ app.use('/static', express.static('static'))
 const home = require('./router/homeRouter')
 const admin = require('./router/adminRoute')
 const register = require('./router/registerRoute')
+const login = require('./router/loginRouter')
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -23,5 +24,6 @@ app.use(session({
 app.use(home)
 app.use(admin)
 app.use(register)
+app.use(login)
 
 app.listen(3000)
