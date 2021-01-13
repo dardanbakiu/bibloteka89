@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/css/navbar.css">
     <link rel="stylesheet" href="/static/css/home.css">
     <link rel="stylesheet" href="/static/css/slider.css">
+    <link rel="stylesheet" href="/static/css/forms.css">
 </head>
 
 <body>
@@ -26,8 +27,14 @@
     </nav>
 
     <div class="center">
-        <div>
-            
+        <div class="form-div">
+
+            <p class="form-title">Login</p>
+            <form action="/loginForm" method="POST">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" name="" id="">
+            </form>
         </div>
     </div>
 </body>
