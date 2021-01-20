@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1 style="font-family: Arial; margin-top:5%">Llogaria juaj u verifikua</h1>
+        <p style="font-family: Arial;">Do te mund te kyceni pas <span id="seconds">5</span> sekondave</p>
+    </center>
+
+    <script>
+        let sekondat = document.getElementById('seconds').innerHTML
+        sekondat = parseInt(sekondat)
+
+        setInterval(() => {
+            sekondat = sekondat - 1
+            document.getElementById('seconds').innerHTML = sekondat
+
+            if (sekondat < 1) {
+                window.location.href = "/login";
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

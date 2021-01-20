@@ -58,10 +58,18 @@ router.post('/registerForm', (req, res) => {
                 }
             })
         }
-
     })
+})
 
+router.get('/verify/:id', (req, res) => {
+    const uuid = req.params.id
+    const query = `UPDATE biblotekistat SET verified=1 WHERE uuid="${uuid}"`
+    dbCon.execute(query)
+    res.render('uVerifikua')
+})
 
+router.get('/verified', (req, res) => {
+    res.render('uVerifikua')
 })
 
 module.exports = router
