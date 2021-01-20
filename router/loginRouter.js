@@ -21,7 +21,8 @@ router.post("/loginForm", (req, res) => {
                     res.render('login')
                 }
                 else {
-                    res.render('biblotekisti')
+                    req.session.biblotekisti = email
+                    res.redirect('/biblotekisti')
                 }
             }
         })

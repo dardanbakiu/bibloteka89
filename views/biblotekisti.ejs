@@ -5,10 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        input {
+            display: block;
+            margin: 6px 0;
+            box-shadow: 2px 5px 4px grey;
+            padding: 10%;
+            border-radius: 100px;
+            border: 1px solid #ddd;
+        }
+
+        #form-text {
+            text-align: center;
+            margin: 5% 0 1% 0;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <!-- <link rel="stylesheet" href="/static/css/general.css"> -->
+    <!-- <link rel="stylesheet" href="/static/css/forms.css"> -->
 </head>
 
 <body>
+    <nav>
+        <div class="logoBox">
+            <img id="logo" src="/static/img/logo.png" alt="">
+            <!-- <img src="" alt="" class="logo"> -->
+        </div>
 
+        <ul>
+            <li><a href="/">Ballina</a></li>
+            <li> <a href="/about">About</a> </li>
+            <li><a href="/login"> <img width="30" src="/static/img/admin.png" alt=""></a></li>
+        </ul>
+    </nav>
+
+    <div class="center">
+        <div class="form-div">
+            <p id="form-text">Lexues</p>
+            <form action="shtoLexues" method="POST">
+                <input type="text" name="emri" id="" placeholder="Emri">
+                <input type="text" name="mbiemri" id="" placeholder="Mbiemri">
+                <input type="text" name="libri" id="" placeholder="Libri">
+                <input type="number" name="kontakti" id="" placeholder="Nr. tel">
+                <input type="submit" name="" id="">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

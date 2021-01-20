@@ -13,6 +13,7 @@ const home = require('./router/homeRouter')
 const admin = require('./router/adminRoute')
 const register = require('./router/registerRoute')
 const login = require('./router/loginRouter')
+const biblotekisti = require('./router/biblotekisti')
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -25,5 +26,6 @@ app.use(home)
 app.use(admin)
 app.use(register)
 app.use(login)
+app.use(biblotekisti)
 
 app.listen(3000)
