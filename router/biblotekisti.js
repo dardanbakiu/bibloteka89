@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const dbCon = require('../databse')
 
 const biblotekistiMiddleware = require('../middleware/biblotekistiMiddleware')
 
@@ -27,9 +28,10 @@ router.post('/shtoLexues', (req, res) => {
         dataKthimit = `${dita}.${muji + 1}.${viti}`
     }
 
+    const query = `INSERT INTO lexuesit(emri,mbiemri,libri,datasot,datakthimit,kontakti) VALUES ("${emri}","${mbiemri}","${libri}","${dataSot}","${dataKthimit}",${kontakti})`
+    dbCon.execute(query)
 
-    console.log(dataSot)
-    console.log(dataKthimit)
+    res.render('biblotekisti', { err: 'U shtua me sukses' })
 })
 
 module.exports = router

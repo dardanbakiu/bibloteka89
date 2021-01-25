@@ -22,6 +22,15 @@ app.use(session({
     cookie: { maxAge: 30 * 60 * 1000 } //30 minuta bablock
 }))
 
+app.get('/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) console.log(err)
+        else {
+            res.redirect('/')
+        }
+    })
+})
+
 app.use(home)
 app.use(admin)
 app.use(register)
