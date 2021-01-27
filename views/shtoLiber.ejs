@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/forms.css">
 </head>
 
 <body>
@@ -21,6 +23,21 @@
         </ul>
     </nav>
 
+
+    <div class="center">
+        <div class="form-div">
+            <p id="form-text">Shto Liber</p>
+            <form action="shtoLiberForm" method="POST">
+                <input type="text" name="titulli" id="" placeholder="Titulli">
+                <input type="text" name="autori" id="" placeholder="Autori">
+                <input type="number" name="sasia" id="" placeholder="sasia">
+                <input type="submit" name="" id="">
+            </form>
+        </div>
+        <p style="text-align: center; color :tomato">
+            <%= err %>
+        </p>
+    </div>
 </body>
 
 </html>

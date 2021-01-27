@@ -14,6 +14,7 @@ const admin = require('./router/adminRoute')
 const register = require('./router/registerRoute')
 const login = require('./router/loginRouter')
 const biblotekisti = require('./router/biblotekisti')
+const shtoLiber = require('./router/shtoLiber')
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -30,7 +31,7 @@ app.get('/logout', (req, res) => {
         }
     })
 })
-
+app.use(shtoLiber)
 app.use(home)
 app.use(admin)
 app.use(register)
