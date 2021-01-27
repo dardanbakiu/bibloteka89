@@ -67,6 +67,14 @@
     </div>
 
 
+    <div>
+        <% for(let i=0 ; i< librat.length ; i++) { %>
+            <p>
+                Libri <%- librat[i].id + 1 %> Titulli <%- librat[i].titulli %>
+                        Autori : <%- librat[i].autori %>
+            </p>
+            <% } %>
+    </div>
 
 
     <script src="/static/js/slider.js"></script>
